@@ -4,7 +4,8 @@
 # HW 3
 # Question 3
 
-from matplotlib import pyplot as plt
+
+# from matplotlib import pyplot as plt
 import numpy as np
 
 SIZE = (40, 40)
@@ -169,19 +170,19 @@ def log_like_deriv(h, y, y_hat, theta):
     return np.dot(h.T, (y - y_hat)) + l2
 
 
-def plot_j(J, fileName):
-    plt.plot(range(len(J)), J)
-    plt.xlabel("Iterations")
-    plt.ylabel("Average Log Likelihood")
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_j(J, fileName):
+#     plt.plot(range(len(J)), J)
+#     plt.xlabel("Iterations")
+#     plt.ylabel("Average Log Likelihood")
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
-def plot_kernel(kernel, fileName):
-    plt.imshow(kernel, interpolation='nearest')
-    plt.gray()
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_kernel(kernel, fileName):
+#     plt.imshow(kernel, interpolation='nearest')
+#     plt.gray()
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
 def main():
@@ -197,16 +198,16 @@ def main():
 
     # Initializes the kernels
     kernel = np.random.uniform(-0.001, 0.001, size=SIZE)
-    plot_kernel(kernel, "mle/init_kernel_mle.png")
+    # plot_kernel(kernel, "mle/init_kernel_mle.png")
 
     # Initializes the weights
     thetas = np.random.uniform(-0.001, 0.001, size=(2, 1))
 
     kernel, thetas, avg_err = training(data, y, kernel, thetas)
-    plot_kernel(kernel, "mle/final_kernel_mle.png")
-    plot_j(avg_err, "mle/mle_plot.png")
+    # plot_kernel(kernel, "mle/final_kernel_mle.png")
+    # plot_j(avg_err, "mle/mle_plot.png")
 
-    print("\nPlots saved in mle/")
+    # print("\nPlots saved in mle/")
 
 
 if __name__ == "__main__":

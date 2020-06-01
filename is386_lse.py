@@ -4,7 +4,7 @@
 # HW 3
 # Question 2
 
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import numpy as np
 
 SIZE = (40, 40)
@@ -164,19 +164,19 @@ def squared_error_grad(h, y, y_hat, theta):
     return (2 * h.T * (y_hat - y)) - l2
 
 
-def plot_j(J, fileName):
-    plt.plot(range(len(J)), J)
-    plt.xlabel("Iterations")
-    plt.ylabel("RMSE")
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_j(J, fileName):
+#     plt.plot(range(len(J)), J)
+#     plt.xlabel("Iterations")
+#     plt.ylabel("RMSE")
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
-def plot_kernel(kernel, fileName):
-    plt.imshow(kernel, interpolation='nearest')
-    plt.gray()
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_kernel(kernel, fileName):
+#     plt.imshow(kernel, interpolation='nearest')
+#     plt.gray()
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
 def main():
@@ -192,16 +192,16 @@ def main():
 
     # Initializes the kernels
     kernel = np.random.uniform(-0.00001, 0.00001, size=SIZE)
-    plot_kernel(kernel, "lse/init_kernel_lse.png")
+    # plot_kernel(kernel, "lse/init_kernel_lse.png")
 
     # Initializes the weights
     thetas = np.random.uniform(-1, 1, size=(2, 1))
 
     kernel, thetas, avg_err = training(data, y, kernel, thetas)
-    plot_kernel(kernel, "lse/final_kernel_lse.png")
-    plot_j(avg_err, "lse/lse_plot.png")
+    # plot_kernel(kernel, "lse/final_kernel_lse.png")
+    # plot_j(avg_err, "lse/lse_plot.png")
 
-    print("\nPlots saved in lse/")
+    # print("\nPlots saved in lse/")
 
 
 if __name__ == "__main__":

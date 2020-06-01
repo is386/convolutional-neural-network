@@ -4,7 +4,7 @@
 # HW 3
 # Question 3
 
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import numpy as np
 
 SIZE = (40, 40)
@@ -168,19 +168,19 @@ def cross_entropy_grad(h, y, y_hat, theta):
     return (h.T * (y_hat - y)) - l2
 
 
-def plot_j(J, fileName):
-    plt.plot(range(len(J)), J)
-    plt.xlabel("Iterations")
-    plt.ylabel("Average Cross Entropy")
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_j(J, fileName):
+#     plt.plot(range(len(J)), J)
+#     plt.xlabel("Iterations")
+#     plt.ylabel("Average Cross Entropy")
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
-def plot_kernel(kernel, fileName):
-    plt.imshow(kernel, interpolation='nearest')
-    plt.gray()
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_kernel(kernel, fileName):
+#     plt.imshow(kernel, interpolation='nearest')
+#     plt.gray()
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
 def main():
@@ -196,16 +196,16 @@ def main():
 
     # Initializes the kernels
     kernel = np.random.uniform(-0.001, 0.001, size=SIZE)
-    plot_kernel(kernel, "lce/init_kernel_lce.png")
+    # plot_kernel(kernel, "lce/init_kernel_lce.png")
 
     # Initializes the weights
     thetas = np.random.uniform(-0.001, 0.001, size=(2, 2))
 
     kernel, thetas, avg_err = training(data, y, kernel, thetas)
-    plot_j(avg_err, "lce/lce_plot.png")
-    plot_kernel(kernel, "lce/final_kernel_lce.png")
+    # plot_j(avg_err, "lce/lce_plot.png")
+    # plot_kernel(kernel, "lce/final_kernel_lce.png")
 
-    print("\nPlots saved in lce/")
+    # print("\nPlots saved in lce/")
 
 
 if __name__ == "__main__":

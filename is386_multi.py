@@ -4,7 +4,7 @@
 # HW 3
 # Question 5
 
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import numpy as np
 
 SIZE = (40, 40)
@@ -176,20 +176,20 @@ def log_like_deriv(h, y, y_hat, theta):
     return (h.T * (y - y_hat)) + l2
 
 
-def plot_j(J, fileName):
-    plt.plot(range(len(J)), J)
-    plt.xlabel("Iterations")
-    plt.ylabel("Average Log Likelihood")
-    plt.savefig(fileName, bbox_inches='tight')
-    plt.close()
+# def plot_j(J, fileName):
+#     plt.plot(range(len(J)), J)
+#     plt.xlabel("Iterations")
+#     plt.ylabel("Average Log Likelihood")
+#     plt.savefig(fileName, bbox_inches='tight')
+#     plt.close()
 
 
-def plot_kernels(kernels, fileName):
-    for i, kernel in enumerate(kernels):
-        plt.imshow(kernel, interpolation='nearest')
-        plt.gray()
-        plt.savefig(fileName + str(i + 1) + ".png", bbox_inches='tight')
-        plt.close()
+# def plot_kernels(kernels, fileName):
+#     for i, kernel in enumerate(kernels):
+#         plt.imshow(kernel, interpolation='nearest')
+#         plt.gray()
+#         plt.savefig(fileName + str(i + 1) + ".png", bbox_inches='tight')
+#         plt.close()
 
 
 def main():
@@ -210,10 +210,10 @@ def main():
     thetas = np.random.uniform(-1, 1, size=(2, 324))
 
     kernels, thetas, avg_err = training(data, y, kernels, thetas)
-    plot_j(avg_err, "multi/mle_plot2.png")
-    plot_kernels(kernels, "multi/final_kernel_mle")
+    # plot_j(avg_err, "multi/mle_plot2.png")
+    # plot_kernels(kernels, "multi/final_kernel_mle")
 
-    print("\nPlots saved in multi/")
+    # print("\nPlots saved in multi/")
 
 
 if __name__ == "__main__":
