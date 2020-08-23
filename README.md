@@ -27,7 +27,7 @@ The kernel images will be saved in the same directory.
 
 ## Results
 
-## Network
+### Network
 
 - 40x40 convolution layer with a single kernel
 
@@ -37,7 +37,7 @@ The kernel images will be saved in the same directory.
 
 - Shallow input layer
 
-## Synthetic Data
+### Synthetic Data
 
 ![](https://github.com/is386/CNN/blob/master/line1.png?raw=true)
 ![](https://github.com/is386/CNN/blob/master/line2.png?raw=true)
