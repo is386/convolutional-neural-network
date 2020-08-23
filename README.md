@@ -27,7 +27,7 @@ The kernel images will be saved in the same directory.
 
 ## Results
 
-The following network was used for this test:
+## Network
 
 - 40x40 convolution layer with a single kernel
 
@@ -37,7 +37,7 @@ The following network was used for this test:
 
 - Shallow input layer
 
-The following synthetic data was used for this test:
+## Synthetic Data
 
 ![](https://github.com/is386/CNN/blob/master/line1.png?raw=true)
 ![](https://github.com/is386/CNN/blob/master/line2.png?raw=true)
